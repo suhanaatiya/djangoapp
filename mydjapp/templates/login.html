@@ -1,0 +1,40 @@
+{% include 'header.html' %}
+
+{% include 'nav.html' %}
+
+<div id="main">
+
+<br/>
+<center>	
+<font color="blue" >{{msg}}</font>
+<h2>Login Here!!!</h2>
+<form method="post" action="/login/">
+{% csrf_token %}
+<table cellspacing="5" cellpadding="5">
+
+<tr>
+<td>Username</td>
+<td><input type="text" id="username" name="username" placeholder="Enter username/email" onkeyup="return validate()" /></td>
+<td id="err2"></td>
+</tr>
+
+<tr>
+<td>Password</td>
+<td><input type="password" id="password" name="password" placeholder="Enter password" onkeyup="return validate()"/></td>
+<td id="err3"></td>
+</tr>
+
+<tr>
+<td colspan="3">
+<input type="submit" value="Login" />
+</td>
+</tr>
+
+</table>
+
+</form>
+</center>
+
+</div>
+
+{% include 'footer.html' %}
